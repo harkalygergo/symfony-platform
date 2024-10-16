@@ -2,15 +2,18 @@
 
 namespace App\Controller\Platform;
 
+use App\Repository\Platform\UserRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MainController extends _PlatformController
+class UserController extends _PlatformController
 {
-    #[Route('/', name: 'platform_main')]
-    public function start(): Response
+    #[Route('/admin/users', name: 'admin_users')]
+    public function index(UserRepository $userRepository): Response
     {
         $environment = $this->getPlatformBasicEnviroments();
+
+        $environment['users'] = $userRepository->findAll();
 
         return $this->render('platform/backend/base.html.twig', $environment);
     }
