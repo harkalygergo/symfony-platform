@@ -1,8 +1,16 @@
 {
+    "name": "harkalygergo/symfony-platform",
+    "description": "Symfony Platform is a multisite and multilingual compatibility Management System based on Symfony PHP Framework. It's ideal for managing and growing any organization. Free and open-source and always will be.",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Harkály Gergő",
+            "email": "git@harkalygergo.hu"
+        }
+    ],
     "require": {
         "php": ">=8.3",
         "ext-ctype": "*",
@@ -68,6 +76,10 @@
         }
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.61"
+        "phpunit/phpunit": "^11.2",
+        "symfony/debug-bundle": "^7.1",
+        "symfony/maker-bundle": "^1.61",
+        "symfony/stopwatch": "7.1.*",
+        "symfony/web-profiler-bundle": "7.1.*"
     }
 }
