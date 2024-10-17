@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="robots" content="{{ robots }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="author" content="Harkály Gergő">
+
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.brandcomstudio.com/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.brandcomstudio.com/vendor/twbs/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/assets/img/stack-platform-icon-bootstrap-icon.png">
+
+    {% block stylesheets %}{% endblock %}
+
+    {% block styles %}{% endblock %}
+</head>
+<body>
+
+{% block header %}{% endblock %}
+
+{% block body %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+<script src="//cdn.brandcomstudio.com/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.brandcomstudio.com/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+{% block javascripts %}{% endblock %}
+
+</body>
+</html>

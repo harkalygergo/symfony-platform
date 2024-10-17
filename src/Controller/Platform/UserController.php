@@ -15,6 +15,6 @@ class UserController extends _PlatformController
 
         $environment['users'] = $userRepository->findAll();
 
-        return $this->render('platform/backend/base.html.twig', $environment);
+        return $this->render('platform/backend/main.html.twig', $environment);
     }
 }

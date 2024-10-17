@@ -15,8 +15,14 @@ class _PlatformController extends AbstractController
     public function getPlatformBasicEnviroments()
     {
         return [
-            'locale' => $this->requestStack->getCurrentRequest()->getLocale(),
-            'request' => $this->requestStack->getCurrentRequest()->query->all(),
+            'robots'        => '',
+            'keywords'      => '',
+            'description'   => '',
+            'title'         => 'PLATFORM',
+            'locale'        => $this->requestStack->getCurrentRequest()->getLocale(),
+            'request'       => $this->requestStack->getCurrentRequest()->query->all(),
+            'ip'            => $this->requestStack->getCurrentRequest()->getClientIp(),
+            'userAgent'     => $this->requestStack->getCurrentRequest()->headers->get('User-Agent'),
         ];
     }
 }

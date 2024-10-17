@@ -1,0 +1,19 @@
+{% extends 'platform/base.html.twig' %}
+
+{% block body %}
+    <pre>
+        {{ ip }}
+        {{ locale }}
+    {{ request | json_encode() }}
+    {{ app.request.locale }}
+    {{ app.request.pathInfo }}
+    {{ app.request.uri }}
+    {{ app.request.requestUri }}
+    {{ app.request.basePath }}
+    {{ app.request.baseUrl }}
+    {{ app.request.scheme }}
+    {{ app.request.httpHost }}
+    {{ app.request.host }}
+    {#{ dump(request) }#}
+    </pre>
+{% endblock %}

@@ -1,5 +1,5 @@
 # Symfony Platform
-###### Version: 2024.10.17.3
+###### Version: 2024.10.17.4
 
 Symfony Platform is a multisite and multilingual compatibility Management System based on Symfony PHP Framework. It's ideal for managing and growing any organization. Free and open-source and always will be.
 
