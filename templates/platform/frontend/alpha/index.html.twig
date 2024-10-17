@@ -2,8 +2,8 @@
 
 {% block body %}
     <pre>
-        {{ ip }}
-        {{ locale }}
+    {{ ip }}
+    {{ locale }}
     {{ request | json_encode() }}
     {{ app.request.locale }}
     {{ app.request.pathInfo }}
@@ -16,4 +16,5 @@
     {{ app.request.host }}
     {#{ dump(request) }#}
     </pre>
+
 {% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'platform/backend/main.html.twig' %}
+
+{% block form %}
+    <h1>{{ title|raw }}</h1>
+    {{ form(form) }}
+
+    {% if app.request.headers.get('referer') %}
+        <p class="pt-3"><a class="text-dark" href="{{ app.request.headers.get('referer') }}">&laquo; {{ 'global.back'|trans }}</a></p>
+    {% endif %}
+{% endblock %}

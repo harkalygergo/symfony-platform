@@ -4,7 +4,6 @@ namespace App\Controller\Platform\Backend;
 
 use App\Controller\Platform\_PlatformController;
 use App\Repository\Platform\UserRepository;
-
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 

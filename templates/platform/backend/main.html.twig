@@ -1,7 +1,7 @@
 {% extends 'platform/backend/backend.base.html.twig' %}
 
 {% block main %}
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light text-black">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Users</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -16,10 +16,25 @@
         </div>
     </div>
 
-    {{ locale }}<br>
-    {{ app.request.locale }}<br>
-    {{ request | json_encode() }}<br>
+    <pre>
+        {{ ip }}
+        {{ locale }}
+        {{ request | json_encode() }}
+        {{ app.request.locale }}
+        {{ app.request.pathInfo }}
+        {{ app.request.uri }}
+        {{ app.request.requestUri }}
+        {{ app.request.basePath }}
+        {{ app.request.baseUrl }}
+        {{ app.request.scheme }}
+        {{ app.request.httpHost }}
+        {{ app.request.host }}
+    </pre>
     {{ dump(request) }}
+
+    {% block form %}
+    {% endblock %}
+
 
     <div class="table-responsive small">
         <table class="table table-striped table-sm">
