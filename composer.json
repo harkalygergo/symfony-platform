@@ -1,6 +1,6 @@
 {
     "name": "harkalygergo/symfony-platform",
-    "description": "Symfony Platform is a multisite and multilingual compatibility Management System based on Symfony PHP Framework. It's ideal for managing and growing any organization. Free and open-source and always will be.",
+    "description": "Platform is a multisite and multilingual compatibility Management System based on Symfony PHP Framework. It's ideal for managing and growing any organization. Free and open-source and always will be.",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",
@@ -22,8 +22,10 @@
         "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",
+        "symfony/form": "7.1.*",
         "symfony/framework-bundle": "7.1.*",
         "symfony/runtime": "7.1.*",
+        "symfony/security-bundle": "7.1.*",
         "symfony/twig-bundle": "7.1.*",
         "symfony/validator": "7.1.*",
         "symfony/yaml": "7.1.*"
