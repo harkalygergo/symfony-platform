@@ -1,0 +1,68 @@
+{% extends 'platform/base.html.twig' %}
+
+{% block style %}
+    <style>
+        body {
+            background-color:rgb(33, 37, 41);
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5">
+
+                                <h2 class="fw-bold mb-2 text-uppercase"><i class="bi bi-stack"></i> {{ app.request.server.get('PLATFORM_NAME') }}</h2>
+                                <p class="text-white-50 mb-5">{{ app.request.server.get('PLATFORM_SLOGAN') }}</p>
+                                {{ form_start(form) }}
+                                <div class="text-start">
+                                    {{ form_widget(form) }}
+                                </div>
+                                {{ form_end(form) }}
+                                <!--form method="post" action="{{ path("admin_login_" ~ app.request.locale) }}">
+                                <div class="text-start">
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="username"><i class="bi bi-person"></i> {{ 'global.identifier'|trans }}</label>
+                                        <input type="text" id="username" name="_username" class="form-control form-control-lg bg-dark text-white" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="password"><i class="bi bi-lock"></i> {{ 'global.password'|trans }}</label>
+                                        <input type="password" id="password" name="password" class="form-control form-control-lg bg-dark text-white" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4 form-group">
+                                        <label for="languageSelector"><i class="bi bi-translate"></i> {{ 'global.language'|trans }}</label>
+                                        <select class="form-control form-control-lg bg-dark text-white" id="languageSelector">
+                                            <option>english</option>
+                                            <option>magyar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-outline form-white mb-4 form-check">
+                                        <input class="form-check-input bg-dark text-white" type="checkbox" value="" id="keepLoggedIn">
+                                        <label class="form-check-label" for="keepLoggedIn">
+                                            {{ 'global.keepLoggedIn'|trans }}
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">{{ 'global.login'|trans }} <i class="bi bi-box-arrow-in-right"></i></button>
+                            </form-->
+
+                                <p class="small mt-5"><a class="text-white-50" href="#!">{{ 'global.forgotPassword'|trans }}</a></p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

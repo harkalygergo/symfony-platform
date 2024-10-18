@@ -3,6 +3,7 @@
 namespace App\Controller\Platform\Backend;
 
 use App\Controller\Platform\_PlatformController;
+use App\Form\Platform\LoginType;
 use App\Form\Platform\UserType;
 use App\Repository\Platform\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,6 +21,26 @@ class UserController extends _PlatformController
 
         return $this->render('platform/backend/main.html.twig', $environment);
     }
+
+    #[Route('/hu/belepes', name: 'admin_login_hu')]
+    #[Route('/en/login', name: 'admin_login_en')]
+    public function accountLogin(): Response
+    {
+        $data = $this->getPlatformBasicEnviroments();
+
+        // use LoginType
+        $form = $this->createForm(LoginType::class);
+
+        $data += [
+            'title' => '<i class="bi bi-box-arrow-in-right"></i> Bejelentkezés',
+            'content' => '',
+            'sidebar' => 'platform/backend/v1/sidebar_login.html.twig',
+            'form' => $form
+        ];
+
+        return $this->render('platform/backend/login.html.twig', $data);
+    }
+
 
 
     #[Route('/{_locale}/admin/account/edit', name: 'account_edit')]
