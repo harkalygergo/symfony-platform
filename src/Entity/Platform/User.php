@@ -52,6 +52,11 @@ class User
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $profileImageUrl = null;
 
+    // user has many-to-many relation with Instance
+    #[ORM\ManyToMany(targetEntity: Instance::class)]
+    #[ORM\JoinTable(name: 'user_instance')]
+    private $instances;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -199,5 +204,40 @@ class User
         $this->profileImageUrl = $profileImageUrl;
 
         return $this;
+    }
+
+    public function getInstances()
+    {
+        return $this->instances;
+    }
+
+    public function setInstances($instances): void
+    {
+        $this->instances = $instances;
+    }
+
+    public function addInstance($instance): void
+    {
+        $this->instances[] = $instance;
+    }
+
+    public function removeInstance($instance): void
+    {
+        $this->instances->removeElement($instance);
+    }
+
+    public function hasInstance($instance): bool
+    {
+        return $this->instances->contains($instance);
+    }
+
+    public function getDefaultInstance()
+    {
+        return $this->instances->first();
+    }
+
+    public function setDefaultInstance($instance): void
+    {
+        $this->instances->add($instance);
     }
 }

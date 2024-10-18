@@ -31,6 +31,23 @@ class UserController extends _PlatformController
         return $this->render('platform/backend/list.html.twig', $environment);
     }
 
+    #[Route('/{_locale}/admin/user/instance', name: 'admin_user_instance')]
+    public function adminUserInstances(UserRepository $userRepository): Response
+    {
+        $environment = $this->getPlatformBasicEnviroments();
+
+        $instance = $userRepository->find(1)->getDefaultInstance();
+
+        $environment['title'] = 'Instances';
+        $environment['tableHead'] = [
+            'title' => 'Title',
+            'owner' => 'Tulajdonos',
+        ];
+        $environment['tableBody'] = $userRepository->getInstancesByUser(1);
+
+        return $this->render('platform/backend/list.html.twig', $environment);
+    }
+
     #[Route('/hu/belepes', name: 'admin_login_hu')]
     #[Route('/en/login', name: 'admin_login_en')]
     public function accountLogin(): Response
