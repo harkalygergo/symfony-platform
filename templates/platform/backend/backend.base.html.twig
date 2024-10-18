@@ -3,7 +3,9 @@
 {% set robots = 'noindex,nofollow' %}
 {% set keywords = '' %}
 {% set description = '' %}
-{% set title = 'PLATFORM BMS ADMIN' %}
+{% if title is not defined %}
+    {% set title = 'PLATFORM BMS ADMIN' %}
+{% endif %}
 
 {% block styles %}
     <style>

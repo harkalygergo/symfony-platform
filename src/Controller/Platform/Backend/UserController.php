@@ -12,14 +12,23 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends _PlatformController
 {
-    #[Route('/{_locale}/admin/users', name: 'admin_users')]
+    #[Route('/{_locale}/admin/user', name: 'admin_user')]
     public function index(UserRepository $userRepository): Response
     {
         $environment = $this->getPlatformBasicEnviroments();
 
-        $environment['users'] = $userRepository->findAll();
+        $environment['title'] = 'Felhasználók';
+        $environment['tableHead'] = [
+            'lastName'  => $this->translator->trans('user.lastName'),
+            'firstName' => $this->translator->trans('user.firstName'),
+            'email'     => $this->translator->trans('global.email'),
+            'phone'     => $this->translator->trans('global.phone'),
+            'status'    => $this->translator->trans('global.status'),
+            'lastLogin' => $this->translator->trans('user.lastLogin'),
+        ];
+        $environment['tableBody'] = $userRepository->findAll();
 
-        return $this->render('platform/backend/main.html.twig', $environment);
+        return $this->render('platform/backend/list.html.twig', $environment);
     }
 
     #[Route('/hu/belepes', name: 'admin_login_hu')]

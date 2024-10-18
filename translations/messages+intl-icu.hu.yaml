@@ -1,14 +1,17 @@
 global:
     add new: 'új hozzáadása'
     back: "vissza"
+    dontHaveAccount: 'Nincs még fiókja?'
+    email: 'E-mail cím'
+    forgotPassword: 'Elfelejtett jelszó'
     identifier: 'Azonosító'
+    keepLoggedIn: 'Maradjak bejelentkezve'
     login: 'Bejelentkezés'
     language: 'Nyelv'
     password: 'Jelszó'
+    phone: 'Telefonszám'
     save: 'Mentés'
-    forgotPassword: 'Elfelejtett jelszó'
-    dontHaveAccount: 'Nincs még fiókja?'
-    keepLoggedIn: 'Maradjak bejelentkezve'
+    status: 'Státusz'
     user: 'Felhasználó'
     website: 'Honlap'
     page: 'oldal'
@@ -17,3 +20,10 @@ date:
     updatedAt: 'Frissítve'
 admin:
     dashboard: 'Vezérlőpult'
+user:
+    username: 'Felhasználónév'
+    firstName: 'Keresztnév'
+    lastName: 'Vezetéknév'
+    roles: 'Szerepkörök'
+    password: 'Jelszó'
+    lastLogin: 'Utolsó bejelentkezés'

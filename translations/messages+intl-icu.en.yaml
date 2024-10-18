@@ -1,14 +1,17 @@
 global:
     add new: 'add new'
     back: "back"
+    dontHaveAccount: "Don't have an account?"
+    email: 'Email'
     identifier: 'Identifier'
+    forgotPassword: "Forgot password"
     login: 'Login'
     language: 'Language'
-    password: 'Password'
-    save: 'Save'
-    forgotPassword: "Forgot password"
-    dontHaveAccount: "Don't have an account?"
     keepLoggedIn: 'Keep me logged in'
+    password: 'Password'
+    phone: 'Phone'
+    save: 'Save'
+    status: 'Status'
     user: 'User'
     website: 'Website'
 date:
@@ -16,3 +19,13 @@ date:
     updatedAt: 'Updated at'
 admin:
     dashboard: 'Dashboard'
+user:
+    username: 'Username'
+    firstName: 'First name'
+    lastName: 'Last name'
+    roles: 'Roles'
+    createdAt: 'Created'
+    updatedAt: 'Updated'
+    password: 'Password'
+    lastLogin: 'Last login'
+    
